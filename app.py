@@ -39,7 +39,7 @@ if 'ls' not in sts:
 	sts.refineItems = list(sts.refineRecipies.keys())
 
 selected_city = st.selectbox("Select A City", sts.cities)
-selected_item = st.selectbox('Select An Item To Craft', list(sts.craftItems.keys()))
+selected_item = st.selectbox('Select An Item To Craft', sts.craftItems)
 with st.form(key='columns_in_form'):
     cols = st.columns(len(sts.craftRecipies[selected_item]))
     for i, col in enumerate(cols):
